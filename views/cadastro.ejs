@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center;">
+    
+    <form action="/upload" method="post" enctype="multipart/form-data"> <!--essa é a rota do express, era /cadastrar, troquei rpa teste-->
+        <label>Nome:</label>
+        <input type="text" name="nomeImovel"></input>
+        <br><br>
+
+        <label>Cidade:</label>
+        <input type="text" name="cidade"></input>
+        <br><br>
+
+        <label>Bairro:</label>
+        <input type="text" name="bairro"></input>
+        <br><br>
+
+        <label>Vagas na Garagem:</label>
+        <input type="number" name="vagasGaragem"></input>
+        <br><br>
+
+        <label>Quartos:</label>
+        <input type="number" name="quartos"></input>
+        <br><br>
+
+        <label>Preço:</label>
+        <input type="number" name="preco"></input>
+        <br><br>
+
+        <label>Descrição:</label>
+        <input type="text" name="descricao"></input>
+        <br><br>
+
+        <label>Alugar ou vender:</label>
+        <input type="text" name="tipo"></input>
+        <br><br>
+
+        <label>Foto:</label>
+        <input type="file" name="arquivo"></input>
+        <br><br>
+
+        <button type="submit">Cadastrar 3</button>
+    </form>
+
+</body>
+</html>
+
+
