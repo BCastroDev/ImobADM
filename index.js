@@ -10,7 +10,7 @@
     //     descricao: 'Mouse bacana'
     // })
 
-    const todos = await Produto.findAll() //retorna todos os produtos no DB
+    const todos = await Produto.findAll() //retorna todos os produtos no DB Modificado
     console.log(todos);
 
 
