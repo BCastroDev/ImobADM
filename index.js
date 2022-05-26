@@ -1,16 +1,16 @@
 (async ()=>{
     
     const database = require('./db'); //db é a conexão que criamos
-    const Imovel = require('./imovel'); //Imovel é o model que criamos
+    const Produto = require('./produto'); //Produto é o model que criamos
     await database.sync() //sincroniza o modelo que criamos com o db
     
-    // const novoImovel = await Imovel.create({  
+    // const novoProduto = await Produto.create({  
     //     nome: 'Mouse USB',
     //     preco: 15,
     //     descricao: 'Mouse bacana'
     // })
 
-    const todos = await Imovel.findAll() //retorna todos os produtos no DB
+    const todos = await Produto.findAll() //retorna todos os produtos no DB Modificado
     console.log(todos);
 
 
