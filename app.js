@@ -9,10 +9,19 @@ const multer = require('multer');
 const upload = multer({storage: storage});
 const path = require('path');
 
-app.use('/uploads', express.static('uploads'));
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
-app.set('view engine', 'ejs');
+
+app.use('/uploads', express.static('uploads'));
+app.use('/scripts', express.static(__dirname + '/public/scripts'));
+app.use('/css' , express.static(__dirname + '/public/css'));
+
+const getById = async (req,res) =>{
+    const cardSelected = await imovel.findOne({_id: req.params.id});
+    res.render()
+}
 
 
 app.get('/cadastro', async (req,res)=>{
