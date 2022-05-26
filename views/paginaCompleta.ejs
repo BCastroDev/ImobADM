@@ -22,7 +22,7 @@ console.log("this")
     <div  style=" display: flex; justify-content: center; flex-wrap: wrap;">
         
         <% imoveis.forEach(function(imovel){ %>
-            <div onclick="clickCard(event)" class="card" 
+            <div onclick="clickCard(<%= imovel.id %>)" class="card" 
             style="margin:10px; padding: 10px; 
             height: 350px; width: 300px">
             
@@ -30,7 +30,7 @@ console.log("this")
             src="uploads/<%= imovel.imgPath %>">
             </img>
 
-            <h3> <%= imovel.nomeImovel %> <% imoveis.id %> </h3> <br>
+            <h3> <%= imovel.nomeImovel %> </h3> <br>
             <h5 class=""> R$: <%= imovel.preco %>,00 </h5> 
             </div>
         <% }); %>
