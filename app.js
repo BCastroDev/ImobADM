@@ -82,7 +82,11 @@ app.put('/update/:id',(req,res)=>{
     imovel.update(req.body, {
       where: { id: id }
     })
-    .then((result) => res.send(result))})
+    .then(
+        async (result) => {
+            const atualizado = await imovel.findByPk(req.params.id)
+            res.send(atualizado)
+        })})
         
 
 
