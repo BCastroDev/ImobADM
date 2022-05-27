@@ -1,4 +1,4 @@
-function clickCard(event) {
-    console.log("deu")
+function clickCard(id) {
+    console.log(id)
     
 }
