@@ -11,6 +11,27 @@ const { stringify } = require('nodemon/lib/utils');
 const path = require('path');
 
 app.set('view engine', 'ejs');
+<<<<<<< HEAD
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+
+app.use('/uploads', express.static('uploads'));
+app.use('/scripts', express.static(__dirname + '/public/scripts'));
+app.use('/css' , express.static(__dirname + '/public/css'));
+app.use('/assets' , express.static(__dirname + '/public/assets'));
+
+const getById = async (req,res) =>{
+    const cardSelected = await imovel.findOne({_id: req.params.id});
+    res.render()
+}
+
+app.get('/inicio', async (req,res)=>{
+    const imoveis = await imovel.findAll()
+    res.render('index',{ imoveis } )
+})
+=======
+>>>>>>> b4cee76110c5eda4431116a7a811169d8d9f3166
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()); //middleware  
