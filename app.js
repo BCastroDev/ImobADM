@@ -11,7 +11,6 @@ const { stringify } = require('nodemon/lib/utils');
 const path = require('path');
 
 app.set('view engine', 'ejs');
-<<<<<<< HEAD
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
@@ -30,8 +29,6 @@ app.get('/inicio', async (req,res)=>{
     const imoveis = await imovel.findAll()
     res.render('index',{ imoveis } )
 })
-=======
->>>>>>> b4cee76110c5eda4431116a7a811169d8d9f3166
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()); //middleware  
