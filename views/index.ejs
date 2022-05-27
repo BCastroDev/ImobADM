@@ -61,6 +61,10 @@
 	</head>
 
 	<body>
+
+		
+
+
 		<!--[if lte IE 9]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
 			your browser</a> to improve your experience and security.</p>
@@ -582,7 +586,11 @@
 									</div><!--/.packages-para-->
 									
 									<div class="about-btn">
-										<button  class="about-view packages-btn">
+										<button  
+										type="button" 
+										data-toggle="modal" 
+										data-target="#exampleModalCenter"
+										class="btn about-view packages-btn"> <!--veio do template-->
 											Contato
 										</button>
 									</div><!--/.about-btn-->
@@ -593,6 +601,37 @@
 						<% }); %>
 
 
+  
+						
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"> 
+			<!--esse aqui em cima é o background-->
+
+			<div class="modal-dialog modal-dialog-centered" role="document"  >
+
+			  <div  class="modal-content"> <!--esse aqui é o modal-->
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  .		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>.
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+
+
+
+
+  
 
 
 
@@ -603,6 +642,8 @@
 
 		</section><!--/.packages-->
 		<!--packages end-->
+
+
 
 
 
@@ -626,35 +667,7 @@
 								</div>
 							</div><!--/.single-footer-item-->
 						</div><!--/.col-->
-<!--
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<h2>link</h2>
-								<div class="single-footer-txt">
-									<p><a href="#">home</a></p>
-									<p><a href="#">destination</a></p>
-									<p><a href="#">spacial packages</a></p>
-									<p><a href="#">special offers</a></p>
-									<p><a href="#">blog</a></p>
-									<p><a href="#">contacts</a></p>
-								</div>
-							</div>
 
-						</div>
-
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<h2>popular destination</h2>
-								<div class="single-footer-txt">
-									<p><a href="#">china</a></p>
-									<p><a href="#">venezuela</a></p>
-									<p><a href="#">brazil</a></p>
-									<p><a href="#">australia</a></p>
-									<p><a href="#">london</a></p>
-								</div>
-							</div>
-						</div>
-					-->
 						<div class="col-sm-3">
 							<div class="single-footer-item text-center">
 								<h2 class="text-left">contactos</h2>
@@ -727,6 +740,9 @@
 
 		<!--Custom JS-->
 		<script src="assets/js/custom.js"></script>
+
+		<!--abrir modal-->
+		<script src="scripts/click.js"></script>
 
 
 	</body>

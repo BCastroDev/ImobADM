@@ -45,12 +45,6 @@ font-family: 'Poppins', sans-serif;
 
 }
 
-.imgPlace {
-overflow: hidden;
-height: 290px;
-width: 360px;
-}
-
 body{
     position: relative;
 	font-size:14px;
@@ -146,7 +140,7 @@ html,body{
 }
 .wrapper {
     position: relative;
-    z-index: -1;
+    /* z-index: -1;         ESSE ERA O PROBLEMA DO MODAL*/ 
 }
 .header-area{
     position:relative;
@@ -165,7 +159,7 @@ html,body{
 .is-sticky .header-area:after{
     position:absolute;
     content:'';
-    background: rgba(77,78,84,0.5);
+    background: rgba(77,78,84,1);
     height:100%;
     width:100%;
     top:0;
@@ -192,7 +186,7 @@ html,body{
     padding: 10px 0 0 0;
 }
 .logo a span{
-    color: #000000;
+    color: #00d8ff;
     text-transform: capitalize;
 }
 
@@ -228,7 +222,7 @@ html,body{
 .main-menu  .nav  li.active a,
 .main-menu  .nav  li a:hover,
 .main-menu .nav  li a:focus{
-    color: #000000;
+    color: #00d8ff;
     background-color:transparent;
 }
 .main-menu .nav a:before{
@@ -307,10 +301,10 @@ html,body{
     justify-content: center;
     align-items: center;
 	position: relative;
-	background: url(../../assets/images/home/bannerNome.jpg)no-repeat;
-	background-size: contain;
-	background-position: left;
-	min-height: 560px;
+	background: url(../../assets/images/home/banner.jpg)no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 1000px;
 }
 .about-us:before{
 	position: absolute;
@@ -319,7 +313,7 @@ html,body{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/*background: rgba(0,122,207,.4);*/
+	background: rgba(0,122,207,.4);
 }
 
 /*about-us-content*/
@@ -353,7 +347,7 @@ html,body{
     align-items: center;
     background: #00d8ff;
     border: 1px solid #00d8ff;
-    width: 300px;
+    width: 200px;
     height: 60px;
     white-space: nowrap;
     color: #fff;
@@ -893,7 +887,6 @@ html,body{
 }
 .single-package-item img {
     width: 100%;
-    height: 290px;
 }
 .single-package-item h3{
     position: relative;
@@ -939,7 +932,7 @@ html,body{
 }
 .about-view.packages-btn{
     width: 110px;
-    height: 45px;
+    height: 35px;
     font-size: 14px;
     color: #fff;
     text-transform: capitalize;

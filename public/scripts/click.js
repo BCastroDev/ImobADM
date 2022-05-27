@@ -1,6 +1,4 @@
 function clickCard(event) {
-    console.log(event.target)
-    let modal = event.target;
-    modal.style.color = "green"
+    console.log("deu")
     
 }
