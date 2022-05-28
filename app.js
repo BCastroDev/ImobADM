@@ -26,8 +26,8 @@ app.use('/assets' , express.static(__dirname + '/public/assets'));
 app.use('/assets/js' , express.static(__dirname + '/public/assets/js'));
 app.use('/assets/css' , express.static(__dirname + '/public/assets/css'));
 
-
-app.get('/inicio', async (req,res)=>{
+//Página INDEX.EJS
+app.get('/', async (req,res)=>{
     const imoveis = await imovel.findAll()
     res.render('index',{ imoveis } )
 })
@@ -48,7 +48,7 @@ app.get('/paginacompleta', async (req,res)=>{
     
 })
 
-//pega tudo
+
 app.get('/estados', async (req,res)=>{
     const todosCadastros = await Estados.findAll() //Precisamos fazer como await
     res.send(todosCadastros)

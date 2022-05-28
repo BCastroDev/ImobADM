@@ -566,8 +566,15 @@
 
 						
 						<% imoveis.forEach(function(imovel){ %>
-
-						<div class="col-md-4 col-sm-6">
+						<!-- Por aqui eu chamo o modal quando clicamos em qualquer lugar do card e ainda envio as infs -->
+						<div  
+						data-toggle="modal" 
+						data-target="#exampleModal" 
+						data-imovelnome= " <%= imovel.nomeImovel %>"
+						data-imovelId= " <%= imovel.id %> "
+						data-imovelvalor=" <%= imovel.valor %> "
+						
+						class="col-md-4 col-sm-6">
 							<div class="single-package-item">
 
 								<div class="imgPlace">
@@ -596,20 +603,6 @@
 									
 									<div class="about-btn">
 										
-										<button  
-										type="button" 
-										data-toggle="modal" 
-										data-target="#exampleModal"
-
-										data-imovelnome=" <%= imovel.nomeImovel %> " 
-										data-imovelId=" <%= imovel.id %> " 
-										data-imovelvalor=" <%= imovel.valor %> " 
-
-
-
-										class="btn about-view packages-btn"> <!--veio do template-->
-											Contato
-										</button>
 									</div><!--/.about-btn-->
 								</div><!--/.single-package-item-txt-->
 							</div><!--/.single-package-item-->
@@ -635,7 +628,13 @@
 
 
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div 
+	class="modal fade" 
+	id="exampleModal" 
+	tabindex="-1" 
+	role="dialog" 
+	aria-labelledby="exampleModalLabel" 
+	aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -657,8 +656,8 @@
 			</form>
 			</div>
 			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			<button type="button" class="btn btn-primary">Send message</button>
+			<button class="btn book-btn" role="button" data-dismiss="modal" >Fechar</button>
+			<button class="btn book-btn" role="button"> <a style="color: white;" href="https://wa.me/33984255959" target="_blank"> Contato </a> </button>
 			</div>
 		</div>
 		</div>
