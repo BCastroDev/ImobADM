@@ -10,53 +10,23 @@
 
 		<!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
-
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
 		<!-- TITLE OF SITE -->
 		<title>Imobiliárias</title>
 
-		<!-- favicon img -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-
-		<!--font-awesome.min.css-->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-
-		<!--animate.css-->
 		<link rel="stylesheet" href="assets/css/animate.css" />
-
-		<!--hover.css-->
 		<link rel="stylesheet" href="assets/css/hover-min.css">
-
-		<!--datepicker.css-->
 		<link rel="stylesheet"  href="assets/css/datepicker.css" >
-
-		<!--owl.carousel.css-->
         <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
-
-		<!-- range css-->
         <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
-
-		<!--bootstrap.min.css-->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-		<!-- bootsnav -->
 		<link rel="stylesheet" href="assets/css/bootsnav.css"/>
-
-		<!--style.css-->
 		<link rel="stylesheet" href="assets/css/style.css" />
-
-		<!--responsive.css-->
 		<link rel="stylesheet" href="assets/css/responsive.css" />
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 
 
 		
@@ -216,12 +186,12 @@
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
-															  	<option value="default">Escolha a cidade</option><!-- /.option-->
+															<option value="default">Escolha a cidade</option><!-- /.option-->
 
-															  	<option value="turkey">Manhuaçu</option><!-- /.option-->
+															<option value="turkey">Manhuaçu</option><!-- /.option-->
 
-															  	<option value="russia">Simonésia</option><!-- /.option-->
-															  	<option value="egept">Caratinga</option><!-- /.option-->
+															<option value="russia">Simonésia</option><!-- /.option-->
+															<option value="egept">Caratinga</option><!-- /.option-->
 
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
@@ -238,12 +208,12 @@
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
-															  	<option value="default">1</option><!-- /.option-->
+															<option value="default">1</option><!-- /.option-->
 
-															  	<option value="10">2</option><!-- /.option-->
+															<option value="10">2</option><!-- /.option-->
 
-															  	<option value="15">3</option><!-- /.option-->
-															  	<option value="20">4 ou mais</option><!-- /.option-->
+															<option value="15">3</option><!-- /.option-->
+															<option value="20">4 ou mais</option><!-- /.option-->
 
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
@@ -257,11 +227,11 @@
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
-															  	<option value="default">1 carro</option><!-- /.option-->
+															<option value="default">1 carro</option><!-- /.option-->
 
-															  	<option value="2">2 carros</option><!-- /.option-->
+															<option value="2">2 carros</option><!-- /.option-->
 
-															  	<option value="4">4 carros</option><!-- /.option-->
+															<option value="4">4 carros</option><!-- /.option-->
 
 
 															</select><!-- /.select-->
@@ -612,7 +582,7 @@
 								</div>
 
 								<div class="single-package-item-txt">
-									<h3><%= imovel.nomeImovel %> <%= imovel.id %> 
+									<h3><%= imovel.nomeImovel %>
 									<span class="pull-right">R$ <%= imovel.preco %>,00</span></h3>
 									<div class="packages-para">
 										<p>
@@ -630,11 +600,12 @@
 									</div><!--/.packages-para-->
 									
 									<div class="about-btn">
-										<button onclick="clickCard( <%=imovel.id%> )"> teste</button>
+										
 										<button  
 										type="button" 
 										data-toggle="modal" 
-										data-target="#exampleModalCenter"
+										data-target="#exampleModal"
+										data-whatever="Bruno" 
 										class="btn about-view packages-btn"> <!--veio do template-->
 											Contato
 										</button>
@@ -646,37 +617,37 @@
 						<% }); %>
 
 
-  
+
 						
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModalCenter"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"> 
-			<!--esse aqui em cima é o background-->
-
-			<div class="modal-dialog modal-dialog-centered" role="document"  >
-
-			  <div  class="modal-content"> <!--esse aqui é o modal-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
 				<div class="modal-header">
-				  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
-				  </button>
+				</button>
 				</div>
 				<div class="modal-body">
-				  .		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>.
+				<form>
+					<div class="form-group">
+					<label for="recipient-name" class="col-form-label">Recipient:</label>
+					<input type="text" class="form-control" id="recipient-name">
+					</div>
+					<div class="form-group">
+					<label for="message-text" class="col-form-label">Message:</label>
+					<textarea class="form-control" id="message-text"></textarea>
+					</div>
+				</form>
 				</div>
 				<div class="modal-footer">
-				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				  <button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Send message</button>
 				</div>
-			  </div>
 			</div>
-		  </div>
-
-
-
-
-
-  
+			</div>
+		</div>
 
 
 

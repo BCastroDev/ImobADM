@@ -85,7 +85,18 @@ p {
 
 }
 
-img{	border:none;max-width:100%; height:auto;}
+img{	
+    border:none;
+    /* max-width:100%;  */
+    /* height:auto; */
+}
+
+.imgPlace{
+    height: 300px;
+    
+    /* width: 100%; */
+    overflow: hidden;
+}
 
 ul{
 
@@ -301,7 +312,7 @@ html,body{
     justify-content: center;
     align-items: center;
 	position: relative;
-	background: url(../../assets/images/home/banner.jpg)no-repeat;
+	background: url(../../assets/images/home/bannerNome.jpg)no-repeat;
 	background-size: cover;
 	background-position: center;
 	min-height: 1000px;
