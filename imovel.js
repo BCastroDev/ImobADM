@@ -16,7 +16,7 @@ cidade: Sequelize.STRING,
 bairro: Sequelize.STRING,
 vagasGaragem: Sequelize.DECIMAL,
 quartos: Sequelize.DECIMAL,
-preco: Sequelize.DECIMAL,
+valor: Sequelize.DECIMAL,
 descricao: Sequelize.STRING,
 tipo: Sequelize.STRING //comprar ou alugar
 

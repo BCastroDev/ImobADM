@@ -16,17 +16,57 @@
 		<title>Imobiliárias</title>
 
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="assets/css/animate.css" />
-		<link rel="stylesheet" href="assets/css/hover-min.css">
-		<link rel="stylesheet"  href="assets/css/datepicker.css" >
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
-        <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/css/bootsnav.css"/>
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="/assets/css/animate.css" />
+		<link rel="stylesheet" href="/assets/css/hover-min.css">
+		<link rel="stylesheet" href="/assets/css/datepicker.css" >
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="/assets/css/jquery-ui.min.css" />
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/assets/css/bootsnav.css"/>
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="stylesheet" href="/assets/css/responsive.css" />
+
+		
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/assets/js/jquery.js"></script>
+
+		<!--modernizr.min.js-->
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+		<!--bootstrap.min.js-->
+		<script  src="/assets/js/bootstrap.min.js"></script>
+
+		<!-- bootsnav js -->
+		<script src="/assets/js/bootsnav.js"></script>
+
+		<!-- jquery.filterizr.min.js -->
+		<script src="/assets/js/jquery.filterizr.min.js"></script>
+
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+		<!--jquery-ui.min.js-->
+        <script src="/assets/js/jquery-ui.min.js"></script>
+
+        <!-- counter js -->
+		<script src="/assets/js/jquery.counterup.min.js"></script>
+		<script src="/assets/js/waypoints.min.js"></script>
+
+		<!--owl.carousel.js-->
+        <script  src="/assets/js/owl.carousel.min.js"></script>
+
+        <!-- jquery.sticky.js -->
+		<script src="/assets/js/jquery.sticky.js"></script>
+
+        <!--datepicker.js-->
+        <script  src="/assets/js/datepicker.js"></script>
+
+		<!--Custom JS-->
+		<script src="/assets/js/custom.js"></script>
+
+		<!--abrir modal-->
+		<script src="/assets/js/click.js"></script>
 
 
 		
@@ -36,53 +76,8 @@
 	</head>
 
 	<body>
-		<script src="assets/js/jquery.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-		<!--modernizr.min.js-->
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 
-		<!--bootstrap.min.js-->
-		<script  src="assets/js/bootstrap.min.js"></script>
-
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-
-		<!-- jquery.filterizr.min.js -->
-		<script src="assets/js/jquery.filterizr.min.js"></script>
-
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-		<!--jquery-ui.min.js-->
-        <script src="assets/js/jquery-ui.min.js"></script>
-
-        <!-- counter js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-
-		<!--owl.carousel.js-->
-        <script  src="assets/js/owl.carousel.min.js"></script>
-
-        <!-- jquery.sticky.js -->
-		<script src="assets/js/jquery.sticky.js"></script>
-
-        <!--datepicker.js-->
-        <script  src="assets/js/datepicker.js"></script>
-
-		<!--Custom JS-->
-		<script src="assets/js/custom.js"></script>
-
-		<!--abrir modal-->
-		<script src="scripts/click.js"></script>
-
-		
-
-
-		<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-			your browser</a> to improve your experience and security.</p>
-		<![endif]-->
 
 		<!-- main-menu Start -->
 		<header class="top-area">
@@ -562,7 +557,7 @@
 
 
 
-		<!-- *************************************************************************** packages start-->
+		<!-- ***********Aqui que ficam os CARDS -- packages start-->
 		<section id="pack" class="packages">
 			<div class="container">
 
@@ -583,7 +578,7 @@
 
 								<div class="single-package-item-txt">
 									<h3><%= imovel.nomeImovel %>
-									<span class="pull-right">R$ <%= imovel.preco %>,00</span></h3>
+									<span class="pull-right">R$ <%= imovel.valor %>,00</span></h3>
 									<div class="packages-para">
 										<p>
 											<span>
@@ -605,7 +600,13 @@
 										type="button" 
 										data-toggle="modal" 
 										data-target="#exampleModal"
-										data-whatever="Bruno" 
+
+										data-imovelnome=" <%= imovel.nomeImovel %> " 
+										data-imovelId=" <%= imovel.id %> " 
+										data-imovelvalor=" <%= imovel.valor %> " 
+
+
+
 										class="btn about-view packages-btn"> <!--veio do template-->
 											Contato
 										</button>
@@ -619,35 +620,7 @@
 
 
 						
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">New message</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				</div>
-				<div class="modal-body">
-				<form>
-					<div class="form-group">
-					<label for="recipient-name" class="col-form-label">Recipient:</label>
-					<input type="text" class="form-control" id="recipient-name">
-					</div>
-					<div class="form-group">
-					<label for="message-text" class="col-form-label">Message:</label>
-					<textarea class="form-control" id="message-text"></textarea>
-					</div>
-				</form>
-				</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Send message</button>
-				</div>
-			</div>
-			</div>
-		</div>
+						
 
 
 
@@ -657,11 +630,57 @@
 			</div><!--/.container-->
 
 		</section><!--/.packages-->
-		<!--packages end-->
+		<!--packages - Sessão de cards - end-->
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+			<form>
+				<div class="form-group">
+				<label for="recipient-name" class="col-form-label">Recipient:</label>
+				<input type="text" class="form-control" id="recipient-name">
+				</div>
+				<div class="form-group">
+				<label for="message-text" class="col-form-label">Message:</label>
+				<textarea class="form-control" id="message-text"></textarea>
+				</div>
+			</form>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Send message</button>
+			</div>
+		</div>
+		</div>
+	</div><!-- Fim Modal -->
 
 
 
 
+		<script type="text/javascript">
+			$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  
+  var Nome = button.data('imovelnome')
+  var Id = button.data('imovelid')
+  var Valor= button.data('imovelvalor') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + Nome)
+  modal.find('.modal-body input').val(Id)
+})
+		</script>
 
 
 		
@@ -716,8 +735,6 @@
 
 		</footer><!-- /.footer-copyright-->
 		<!-- footer-copyright end -->
-
-
 
 
 

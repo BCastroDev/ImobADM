@@ -10,33 +10,23 @@ const { stringify } = require('nodemon/lib/utils');
 // const { path } = require('express/lib/application');
 const path = require('path');
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json()); //middleware  
+//precisa disso pro express entender o que está sendo enviado pelo body
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json());
-
 app.use('/uploads', express.static('uploads'));
-app.use('/scripts', express.static(__dirname + '/public/scripts'));
-app.use('/css' , express.static(__dirname + '/public/css'));
 app.use('/assets' , express.static(__dirname + '/public/assets'));
+app.use('/assets/js' , express.static(__dirname + '/public/assets/js'));
+app.use('/assets/css' , express.static(__dirname + '/public/assets/css'));
 
-const getById = async (req,res) =>{
-    const cardSelected = await imovel.findOne({_id: req.params.id});
-    res.render()
-}
 
 app.get('/inicio', async (req,res)=>{
     const imoveis = await imovel.findAll()
     res.render('index',{ imoveis } )
 })
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json()); //middleware  
-//precisa disso pro express entender o que está sendo enviado pelo body
 
-app.use('/uploads', express.static('uploads'));
-app.use('/scripts', express.static(__dirname + '/public/scripts'));
-app.use('/css' , express.static(__dirname + '/public/css'));
 
 
 
@@ -62,7 +52,7 @@ app.get('/', async (req,res)=>{
 //rota multer
 app.post("/upload", upload.single('arquivo') ,  (req,res)=> { //esse file é o nome do campo
 
-     imovel.create(
+    imovel.create(
         {
         imgPath: req.file.filename,
         nomeImovel: req.body.nomeImovel,
@@ -70,7 +60,7 @@ app.post("/upload", upload.single('arquivo') ,  (req,res)=> { //esse file é o n
         bairro: req.body.bairro,
         vagasGaragem: req.body.vagasGaragem,
         quartos: req.body.quartos,
-        preco: req.body.preco,
+        valor: req.body.valor,
         descricao: req.body.descricao,
         tipo: req.body.tipo
 })
