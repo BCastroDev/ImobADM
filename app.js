@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const imovel = require('./imovel') //esse imovel é a modelagem que criamos do db
 const bodyParser = require('body-parser');
 const storage  = require("./multerConfig"); //multer 
 const multer = require('multer');
@@ -10,8 +9,15 @@ const { stringify } = require('nodemon/lib/utils');
 // const { path } = require('express/lib/application');
 const path = require('path');
 
+//models do DB:
+const imovel = require('./imovel') //esse imovel é a modelagem que criamos do db
+const Cidades = require('./cidades') //esse imovel é a modelagem que criamos do db
+const Estados = require('./estados');
+
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()); //middleware  
+
 //precisa disso pro express entender o que está sendo enviado pelo body
 app.set('view engine', 'ejs');
 
@@ -43,11 +49,15 @@ app.get('/paginacompleta', async (req,res)=>{
 })
 
 //pega tudo
-app.get('/', async (req,res)=>{
-    const todosCadastros = await imovel.findAll() //Precisamos fazer como await
+app.get('/estados', async (req,res)=>{
+    const todosCadastros = await Estados.findAll() //Precisamos fazer como await
     res.send(todosCadastros)
 })
 
+app.get('/cidades', async (req,res)=>{
+    const todosCadastros = await Cidades.findAll() //Precisamos fazer como await
+    res.send(todosCadastros)
+})
 
 //rota multer
 app.post("/upload", upload.single('arquivo') ,  (req,res)=> { //esse file é o nome do campo

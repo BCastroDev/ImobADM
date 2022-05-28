@@ -10,12 +10,8 @@
     //     descricao: 'Mouse bacana'
     // })
 
-<<<<<<< HEAD
-    const todos = await Imovel.findAll() //retorna todos os produtos no DB
-=======
-    const todos = await Produto.findAll() //retorna todos os produtos no DB Modificado
->>>>>>> b4cee76110c5eda4431116a7a811169d8d9f3166
-    console.log(todos);
+    // const todos = await Imovel.findAll() //retorna todos os produtos no DB
+    // console.log(todos);
 
 
 })();

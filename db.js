@@ -5,7 +5,7 @@ const sequelize = new Sequelize('imob', 'root', 'Bruno220388', {
 })
 
 sequelize.authenticate()
-.then(function(){console.log("Conexão ok")})
+.then(function(){console.log("Conexão criada com sucesso")})
 .catch(function(){console.log("Erro na conexão")
 });
 
