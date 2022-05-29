@@ -170,11 +170,11 @@ html,body{
 .is-sticky .header-area:after{
     position:absolute;
     content:'';
-    background: rgba(77,78,84,1);
+    background: rgba(77,78,84,0.5);
     height:100%;
-    width:100%;
+    width:200%;
     top:0;
-    left:0;
+    left:-50%;
     z-index:-1;
     -webkit-transition:all 0.5s linear;
     -moz-transition:all 0.5s linear;
@@ -316,6 +316,7 @@ html,body{
 	background-size: cover;
 	background-position: center;
 	min-height: 1000px;
+    
 }
 .about-us:before{
 	position: absolute;
@@ -324,7 +325,7 @@ html,body{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,122,207,.4);
+
 }
 
 /*about-us-content*/
@@ -346,7 +347,7 @@ html,body{
 .about-btn {
     margin-top: 39px;
     letter-spacing: 1.2px;
-     -webkit-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
     -moz-transition: 0.5s ease-in-out;
     -ms-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
@@ -1402,6 +1403,7 @@ html,body{
 .footer-copyright{
     background:#f9f9f9;
     padding: 0 0 60px;
+
 }
 .footer-content{
     padding:120px 0;
