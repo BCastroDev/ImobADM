@@ -15,7 +15,6 @@
 		<!-- TITLE OF SITE -->
 		<title>Imobiliárias</title>
 
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
 		<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="/assets/css/animate.css" />
 		<link rel="stylesheet" href="/assets/css/hover-min.css">
@@ -31,17 +30,17 @@
 		
 
 		<script src="/assets/js/jquery.js"></script>
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<script  src="/assets/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
 		<script src="/assets/js/bootsnav.js"></script>
 		<script src="/assets/js/jquery.filterizr.min.js"></script>
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="/assets/js/jquery-ui.min.js"></script>
 		<script src="/assets/js/jquery.counterup.min.js"></script>
 		<script src="/assets/js/waypoints.min.js"></script>
-        <script  src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/owl.carousel.min.js"></script>
 		<script src="/assets/js/jquery.sticky.js"></script>
-        <script  src="/assets/js/datepicker.js"></script>
+        <script src="/assets/js/datepicker.js"></script>
 
 		<!--Custom JS-->
 		<script src="/assets/js/custom.js"></script>
@@ -82,14 +81,13 @@
 								</div><!-- /.navbar-header-->
 								<div class="collapse navbar-collapse">		  
 									<ul class="nav navbar-nav navbar-right">
-										<li class="smooth-menu"><a href="#home">home</a></li>
-										<li class="smooth-menu"><a href="#pack">Imóveis </a></li>
+										<li class="smooth-menu"><a >Financiamento</a></li>
+										<li class="smooth-menu"><a >Corretores </a></li>
 
 										<!-- <li class="smooth-menu"><a href="#blog">blog</a></li> -->
 										<!-- <li class="smooth-menu"><a href="#subs">subscription</a></li> -->
 										<li>
-											<button class="book-btn">Contato
-											</button>
+											<button class="book-btn">Contato</button>
 										</li><!--/.project-btn--> 
 									</ul>
 								</div><!-- /.navbar-collapse -->
@@ -104,7 +102,7 @@
 		<!-- main-menu End -->
 
 		
-		<!--about-us start -->
+		<!-- Banner inicial -->
 		<section id="home" class="about-us">
 			<div class="container">
 				<div class="about-us-content">
@@ -134,7 +132,7 @@
 			</div><!--/.container-->
 
 		</section><!--/.about-us-->
-		<!--about-us end -->
+		<!--fim do Banner inicial -->
 
 		<!--travel-box start-->
 		<section  class="travel-box">
@@ -147,380 +145,84 @@
 									
 
 								<!-- Tab panes -->
-								<div class="tab-content">
-
-									<div role="tabpanel" class="tab-pane active fade in" id="tours">
-										<div class="tab-para">
-
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active fade in" id="tours">
+				<div class="tab-para">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12">
+							<div class="single-tab-select-box">
+							
+								<h2>Cidade</h2>
+								<div class="travel-select-icon">
+									<select name="cidade" class="form-control" id="cidadeSelecionada">
+										<option value="default">Todas as cidades</option><!-- /.option-->
+										<option value="Manhuaçu">Manhuaçu</option><!-- /.option-->
+										<option value="Simonesia">Simonésia</option><!-- /.option-->
+										<option value="Caratinga">Caratinga</option><!-- /.option-->
+									</select><!-- /.select-->
+								</div><!-- /.travel-select-icon -->
+								
+							</div><!--/.single-tab-select-box-->
+						</div><!--/.col-->
+						<div class="col-lg-2 col-md-1 col-sm-4">
+							<div class="single-tab-select-box">
+								<h2>Quartos</h2>
+								<div class="travel-select-icon">
+									<select class="form-control ">
+									<option value="default">1</option><!-- /.option-->
+									<option value="10">2</option><!-- /.option-->
+									<option value="15">3</option><!-- /.option-->
+									<option value="20">4 ou mais</option><!-- /.option-->
+									</select><!-- /.select-->
+								</div><!-- /.travel-select-icon -->
+							</div><!--/.single-tab-select-box-->
+						</div><!--/.col-->
+						<div class="col-lg-2 col-md-1 col-sm-4">
+							<div class="single-tab-select-box">
+								<h2>Garagem</h2>
+								<div class="travel-select-icon">
+									<select class="form-control ">
+									<option value="default">1 carro</option><!-- /.option-->
+									<option value="2">2 carros</option><!-- /.option-->
+									<option value="4">4 carros</option><!-- /.option-->
+									</select><!-- /.select-->
+								</div><!-- /.travel-select-icon -->
+							</div><!--/.single-tab-select-box-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+					<div class="row">
+						<div class="col-sm-5">
+							<div class="travel-budget">
+								<div class="row">
+									<div class="col-md-3 col-sm-4">
+										<h3>Valor: </h3>
+									</div><!--/.col-->
+									<div class="co-md-9 col-sm-8">
+										<div class="travel-filter">
+											<div class="info_widget">
+												<div class="price_filter">
 													
-														<h2>Cidade</h2>
-
-														<div class="travel-select-icon">
-															<select name="cidade" class="form-control" id="cidadeSelecionada">
-
-																<option value="default">Todas as cidades</option><!-- /.option-->
-																<option value="Manhuaçu">Manhuaçu</option><!-- /.option-->
-																<option value="Simonesia">Simonésia</option><!-- /.option-->
-																<option value="Caratinga">Caratinga</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-														
-
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-
-														<h2>Quartos</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															<option value="default">1</option><!-- /.option-->
-
-															<option value="10">2</option><!-- /.option-->
-
-															<option value="15">3</option><!-- /.option-->
-															<option value="20">4 ou mais</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-
-														<h2>Garagem</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															<option value="default">1 carro</option><!-- /.option-->
-
-															<option value="2">2 carros</option><!-- /.option-->
-
-															<option value="4">4 carros</option><!-- /.option-->
-
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-											<div class="row">
-												<div class="col-sm-5">
-													<div class="travel-budget">
-														<div class="row">
-															<div class="col-md-3 col-sm-4">
-																<h3>Valor: </h3>
-															</div><!--/.col-->
-															<div class="co-md-9 col-sm-8">
-																<div class="travel-filter">
-																	<div class="info_widget">
-																		<div class="price_filter">
-																			
-																			<div id="slider-range"></div><!--/.slider-range-->
-
-																			<div class="price_slider_amount">
-																				<input type="text" id="amount" name="price"  placeholder="Add Your Price" />
-																			</div><!--/.price_slider_amount-->
-																		</div><!--/.price-filter-->
-																	</div><!--/.info_widget-->
-																</div><!--/.travel-filter-->
-															</div><!--/.col-->
-														</div><!--/.row-->
-													</div><!--/.travel-budget-->
-												</div><!--/.col-->
-												<div class="clo-sm-7">
-													<div class="filter-btn about-btn travel-mrt-0 pull-right">
-														<button onclick=""  class="about-view travel-btn">
-															Procurar	
-														</button><!--/.travel-btn-->
-													</div><!--/.about-btn-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-										</div><!--/.tab-para-->
-
-									</div><!--/.tabpannel-->
-
-									<div role="tabpanel" class="tab-pane fade in" id="hotels">
-										<div class="tab-para">
-
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
-
-														<h2>destination</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination country</option><!-- /.option-->
-
-															  	<option value="turkey">turkey</option><!-- /.option-->
-
-															  	<option value="russia">russia</option><!-- /.option-->
-															  	<option value="egept">egypt</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination location</option><!-- /.option-->
-
-															  	<option value="istambul">istambul</option><!-- /.option-->
-
-															  	<option value="mosko">mosko</option><!-- /.option-->
-															  	<option value="cairo">cairo</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>check in</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>check out</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>duration</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">5</option><!-- /.option-->
-
-															  	<option value="10">10</option><!-- /.option-->
-
-															  	<option value="15">15</option><!-- /.option-->
-															  	<option value="20">20</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>members</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">1</option><!-- /.option-->
-
-															  	<option value="2">2</option><!-- /.option-->
-
-															  	<option value="4">4</option><!-- /.option-->
-															  	<option value="8">8</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-											<div class="row">
-												<div class="col-sm-5"></div><!--/.col-->
-												<div class="clo-sm-7">
-													<div class="about-btn travel-mrt-0 pull-right">
-														<button  class="about-view travel-btn">
-															search	
-														</button><!--/.travel-btn-->
-													</div><!--/.about-btn-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-										</div><!--/.tab-para-->
-
-									</div><!--/.tabpannel-->
-
-									<div role="tabpanel" class="tab-pane fade in" id="flights">
-										<div class="tab-para">
-											<div class="trip-circle">
-												<div class="single-trip-circle">
-													<input type="radio" id="radio01" name="radio" />
-  													<label for="radio01">
-  														<span class="round-boarder">
-  															<span class="round-boarder1"></span>
-  														</span>round trip
-  													</label>
-												</div><!--/.single-trip-circle-->
-												<div class="single-trip-circle">
-													<input type="radio" id="radio02" name="radio" />
-  													<label for="radio02">
-  														<span class="round-boarder">
-  															<span class="round-boarder1"></span>
-  														</span>on way
-  													</label>
-												</div><!--/.single-trip-circle-->
-											</div><!--/.trip-circle-->
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
-
-														<h2>from</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your location</option><!-- /.option-->
-
-															  	<option value="turkey">turkey</option><!-- /.option-->
-
-															  	<option value="russia">russia</option><!-- /.option-->
-															  	<option value="egept">egypt</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>departure</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="departure" class="form-control" data-toggle="datepicker"
-																placeholder="12 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>return</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="22 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>adults</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">5</option><!-- /.option-->
-
-															  	<option value="10">10</option><!-- /.option-->
-
-															  	<option value="15">15</option><!-- /.option-->
-															  	<option value="20">20</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>childs</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">1</option><!-- /.option-->
-
-															  	<option value="2">2</option><!-- /.option-->
-
-															  	<option value="4">4</option><!-- /.option-->
-															  	<option value="8">8</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
-
-														<h2>to</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination location</option><!-- /.option-->
-
-															  	<option value="istambul">istambul</option><!-- /.option-->
-
-															  	<option value="mosko">mosko</option><!-- /.option-->
-															  	<option value="cairo">cairo</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-												<div class="col-lg-3 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-
-														<h2>class</h2>
-														<div class="travel-select-icon" >
-															<select class="form-control" >
-
-															  	<option value="default">enter class</option><!-- /.option-->
-
-															  	<option value="A">A</option><!-- /.option-->
-
-															  	<option value="B">B</option><!-- /.option-->
-															  	<option value="C">C</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-												<div class="clo-sm-5">
-													<div class="about-btn pull-right">
-														<button  class="about-view travel-btn">
-															search	
-														</button><!--/.travel-btn-->
-													</div><!--/.about-btn-->
-												</div><!--/.col-->
-												
-											</div><!--/.row-->
-
-										</div>
-
-									</div><!--/.tabpannel-->
-
+													<div id="slider-range"></div><!--/.slider-range-->
+													<div class="price_slider_amount">
+														<input type="text" id="amount" name="price"  placeholder="Add Your Price" />
+													</div><!--/.price_slider_amount-->
+												</div><!--/.price-filter-->
+											</div><!--/.info_widget-->
+										</div><!--/.travel-filter-->
+									</div><!--/.col-->
+								</div><!--/.row-->
+							</div><!--/.travel-budget-->
+						</div><!--/.col-->
+						<div class="clo-sm-7">
+							<div class="filter-btn about-btn travel-mrt-0 pull-right">
+								<button onclick=""  class="about-view travel-btn">
+									Procurar	
+								</button><!--/.travel-btn-->
+							</div><!--/.about-btn-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.tab-para-->
+			</div><!--/.tabpannel-->
 								</div><!--/.tab content-->
 							</div><!--/.desc-tabs-->
         				</div><!--/.single-travel-box-->
@@ -552,7 +254,15 @@
 						data-imovelId= " <%= imovel.id %> "
 						data-imovelvalor=" <%= imovel.valor %> "
 						
-						class="cardsSelect col-md-4 col-sm-6 <%= imovel.cidade %> default">
+						class="cardsSelect col-md-4 col-sm-6 
+						<%= imovel.cidade %>
+						<%= imovel.bairro %>
+						vagas<%= imovel.vagasGaragem %>
+						quartos<%= imovel.quartos %>
+						<%= imovel.valor %>
+						default">
+
+
 							<div class="single-package-item">
 
 								<div class="imgPlace">

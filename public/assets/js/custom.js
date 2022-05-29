@@ -100,14 +100,14 @@ $('.filter-btn').on('click', function(){
         $( "#slider-range" ).slider({
             range: true,
             min: 0,
-            max: 12000,
-            values: [ 2677, 9241 ],
+            max: 10000000,
+            values: [ 0, 100000 ],
             slide: function( event, ui ) {
             $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
             }
         });
-        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        $( "#amount" ).val( "R$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - R$" + $( "#slider-range" ).slider( "values", 1 ) );
         
         
         // Quantity Buttons Shop
