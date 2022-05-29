@@ -66,7 +66,7 @@
 		<script src="/assets/js/custom.js"></script>
 
 		<!--abrir modal-->
-		<script src="/assets/js/click.js"></script>
+		<script src="/assets/js/cardFilter.js"></script>
 
 
 		
@@ -175,18 +175,16 @@
 											<div class="row">
 												<div class="col-lg-4 col-md-4 col-sm-12">
 													<div class="single-tab-select-box">
-
+													
 														<h2>Cidade</h2>
 
 														<div class="travel-select-icon">
-															<select class="form-control ">
+															<select name="cidade" class="form-control" id="cidadeSelecionada">
 
-															<option value="default">Escolha a cidade</option><!-- /.option-->
-
-															<option value="turkey">Manhuaçu</option><!-- /.option-->
-
-															<option value="russia">Simonésia</option><!-- /.option-->
-															<option value="egept">Caratinga</option><!-- /.option-->
+																<option value="default">Todas as cidades</option><!-- /.option-->
+																<option value="Manhuaçu">Manhuaçu</option><!-- /.option-->
+																<option value="Simonesia">Simonésia</option><!-- /.option-->
+																<option value="Caratinga">Caratinga</option><!-- /.option-->
 
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
@@ -261,8 +259,8 @@
 													</div><!--/.travel-budget-->
 												</div><!--/.col-->
 												<div class="clo-sm-7">
-													<div class="about-btn travel-mrt-0 pull-right">
-														<button  class="about-view travel-btn">
+													<div class="filter-btn about-btn travel-mrt-0 pull-right">
+														<button onclick=""  class="about-view travel-btn">
 															Procurar	
 														</button><!--/.travel-btn-->
 													</div><!--/.about-btn-->
@@ -515,8 +513,8 @@
 													<div class="single-tab-select-box">
 
 														<h2>class</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
+														<div class="travel-select-icon" >
+															<select class="form-control" >
 
 															  	<option value="default">enter class</option><!-- /.option-->
 
@@ -562,7 +560,7 @@
 			<div class="container">
 
 				<div class="packages-content">
-					<div class="row">
+					<div class="row" >
 
 						
 						<% imoveis.forEach(function(imovel){ %>
@@ -574,7 +572,7 @@
 						data-imovelId= " <%= imovel.id %> "
 						data-imovelvalor=" <%= imovel.valor %> "
 						
-						class="col-md-4 col-sm-6">
+						class="cardsSelect col-md-4 col-sm-6 <%= imovel.cidade %> default">
 							<div class="single-package-item">
 
 								<div class="imgPlace">
@@ -682,6 +680,30 @@
 })
 	</script>
 
+
+
+<!-- Aqui fica o JQuery de filtro -->
+<script type="text/javascript">
+
+$('.filter-btn').on('click', function(){
+
+	$('.cardsSelect').each(function(){
+
+	var select = document.getElementById("cidadeSelecionada");
+	var opcaoValor = select.options[select.selectedIndex].value;
+
+	if(!$(this).hasClass(opcaoValor)){
+		$(this).fadeOut('slow')
+		console.log(opcaoValor)
+	  }
+	  else {
+		$(this).fadeIn()
+		console.log('caiu aqui 2')
+	  }
+	})
+  
+  })
+</script>
 
 		
 		<!-- footer-copyright start -->
