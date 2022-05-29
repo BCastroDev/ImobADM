@@ -27,6 +27,46 @@ $(document).ready(function(){
 ======================================*/
     
 
+
+//Aqui fica o JQuery de filtro
+$('.filter-btn').on('click', function(){
+
+	$('.cardsSelect').each(function(){
+
+	var select = document.getElementById("cidadeSelecionada");
+	var opcaoValor = select.options[select.selectedIndex].value;
+
+	if(!$(this).hasClass(opcaoValor)){
+		$(this).fadeOut('slow')
+		console.log(opcaoValor)
+	  }
+	  else {
+		$(this).fadeIn()
+		console.log('caiu aqui 2')
+	  }
+	})
+  
+  })
+
+
+
+
+  //Script de abertura do modal
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+
+  var Nome = button.data('imovelnome')
+  var Id = button.data('imovelid')
+    var Valor= button.data('imovelvalor') // Extract info from data-* attributes
+// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + Nome)
+  modal.find('.modal-body input').val(Id)
+  modal.find('modal-body textarea').val(Valor)
+})
+
+
     // 1. Scroll To Top 
 
 		$(window).on('scroll',function () {
