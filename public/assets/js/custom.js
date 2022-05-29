@@ -37,11 +37,11 @@ $('.filter-btn').on('click', function(){
 	var opcaoValor = select.options[select.selectedIndex].value;
 
 	if(!$(this).hasClass(opcaoValor)){
-		$(this).fadeOut('slow')
+		$(this).fadeOut('fast')
 		console.log(opcaoValor)
 	  }
 	  else {
-		$(this).fadeIn()
+		$(this).fadeIn('fast')
 		console.log('caiu aqui 2')
 	  }
 	})
