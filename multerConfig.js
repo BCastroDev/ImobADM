@@ -3,22 +3,33 @@ const path = require('path');
 const fs = require('fs');
 const { dir } = require('console');
 
+// const consulta = require('./consultaId')
+// consulta()
 
-var imgFolder = 1;
+const imgFolder = 1
+
+function criarPasta(){
+
+}
+
+
 
 const storage = multer.diskStorage(
     {
         destination: (req, file, callback)=>{
-            
-            if (!fs.existsSync(path.resolve("uploads")+`/${imgFolder}`)){     //Efetua a criação do diretório
-                fs.mkdirSync(path.resolve("uploads")+`/${imgFolder}`)
-                console.log("A pasta", imgFolder ,"não existia e foi criado")
+            const time=new Date().getTime();
+            let nomePasta = path.resolve("uploads")+`/${req.body.nomeImovel}`
+
+            if (fs.existsSync(nomePasta)){     //Efetua a criação do diretório
+                console.log(req.body)
             }
             else  {
-                console.log("A pasta", imgFolder , "já existia")
+                fs.mkdirSync(nomePasta)
+                console.log("A pasta", imgFolder ,"não existia e foi criado")
 
             }
-            callback(null, path.resolve("uploads")+`/${imgFolder}`)
+
+            callback(null, nomePasta)
             }, //Aqui vai a pasta
         
             filename:(req, file, callback)=>{

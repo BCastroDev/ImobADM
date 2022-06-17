@@ -60,12 +60,13 @@ app.get('/cidades', async (req,res)=>{
 })
 
 //rota multer
-app.post("/upload", upload.array('arquivo',15) ,  (req,res)=> { //esse file é o nome do campo
-
+app.post("/upload", upload.array('arquivo',15) , async (req,res)=> { //esse file é o nome do campo
+    const selected = await imovel.id
+    
     imovel.create(
         {
         // imgPath: req.file.filename,
-        imgPath: req.files,
+        // imgPath: imoveis,
         nomeImovel: req.body.nomeImovel,
         cidade: req.body.cidade,
         bairro: req.body.bairro,
