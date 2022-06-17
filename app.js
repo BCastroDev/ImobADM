@@ -60,11 +60,12 @@ app.get('/cidades', async (req,res)=>{
 })
 
 //rota multer
-app.post("/upload", upload.single('arquivo') ,  (req,res)=> { //esse file é o nome do campo
+app.post("/upload", upload.array('arquivo',15) ,  (req,res)=> { //esse file é o nome do campo
 
     imovel.create(
         {
-        imgPath: req.file.filename,
+        // imgPath: req.file.filename,
+        imgPath: req.files,
         nomeImovel: req.body.nomeImovel,
         cidade: req.body.cidade,
         bairro: req.body.bairro,
@@ -79,6 +80,8 @@ app.post("/upload", upload.single('arquivo') ,  (req,res)=> { //esse file é o n
         res.render('paginaCompleta',{imoveis}) })
     .catch(((erro)=>{res.send(erro)}))
     }); //Fim do APP.POST
+    
+
     
 //deleta de acordo com o ID da requisição
 app.delete('/delete/:id', async (req,res)=>{
